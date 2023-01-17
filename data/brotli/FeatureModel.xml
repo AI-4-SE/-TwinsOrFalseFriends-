@@ -1,0 +1,46 @@
+<vm name="brotli">
+  <binaryOptions>
+    <configurationOption>
+      <name>root</name>
+      <outputString></outputString>
+      <prefix>./brotli --force -o /local/${USER}/compressed.br </prefix>
+      <postfix>
+      </postfix>
+      <parent>
+      </parent>
+      <impliedOptions />
+      <excludedOptions />
+      <optional>False</optional>
+    </configurationOption>
+  </binaryOptions>
+  <numericOptions>
+    <configurationOption>
+      <name>WindowSize</name>
+      <outputString>-w</outputString>
+      <prefix>./brotli --force -o /local/${USER}/compressed.br -w </prefix>
+      <postfix></postfix>
+      <parent>root</parent>
+      <impliedOptions />
+      <excludedOptions />
+      <minValue>10</minValue>
+      <maxValue>24</maxValue>
+      <stepFunction>WindowSize + 1</stepFunction>
+    </configurationOption>
+    <configurationOption>
+      <name>CompressionLevel</name>
+      <outputString></outputString>
+      <prefix>-q </prefix>
+      <postfix>
+      </postfix>
+      <parent>root</parent>
+      <impliedOptions />
+      <excludedOptions />
+      <minValue>0</minValue>
+      <maxValue>11</maxValue>
+      <stepFunction>CompressionLevel + 1</stepFunction>
+    </configurationOption>
+  </numericOptions>
+  <booleanConstraints />
+  <nonBooleanConstraints />
+  <mixedConstraints />
+</vm>

@@ -1,0 +1,173 @@
+broker:
+  user: slurm
+  pw: ...
+  host: kleist1....
+  port: 1883
+publisher:
+  qos: 1
+
+
+
+#Configurations in this file should reflect the current physical setup of the measurement system ('curie02').
+
+i2c_speed: 1000000
+defaults:
+  time_voltage: 140
+  time_current: 140
+  averaging: 1 #Averaging disabled: all samples are collected individually.
+
+#For changing around bus allocation, refer to "yaml_Belegungen" PDF.
+busses:
+  bus0:
+
+    - MOBO_1_3_3V
+    - MOBO_2_3_3V
+    - MOBO_4_5V
+    #- MOBO_6_5V
+    - MOBO_10_12V
+    - MOBO_11_12V
+    - MOBO_12_3_3V
+    - MOBO_13_3_3V
+    - MOBO_21_5V
+    - MOBO_22_5V
+    - MOBO_23_5V
+
+  bus1: null
+
+  bus2:
+    - CPU_1_12V
+    - CPU_2_12V
+    - SSD_YELLOW_12V
+    #- MOBO_6_5V
+    - SSD_RED_5V
+
+
+#An INA's address corresponds to its A0/A1 pin connections on the chip's backside.
+#MOBO voltage depends on the INA's position in the ATX12V 2.x power supply connector,
+#(in the 15 pin Serial Ata Power Connector for SSD voltage).
+#r_shunt = shunt resistor value.
+
+#Device IDs can be assigned deliberately.
+
+inas:
+
+  CPU_1_12V:
+    device_id: A
+    address:
+      a1: GND
+      a0: GND
+    max_current: 2
+    r_shunt: 0.1
+
+  CPU_2_12V:
+    device_id: B
+    address:
+      a1: GND
+      a0: VS
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_1_3_3V:
+    device_id: C
+    address:
+      a1: GND
+      a0: SDA
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_2_3_3V:
+    device_id: D
+    address:
+      a1: VS
+      a0: VS
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_4_5V:
+    device_id: E
+    address:
+      a1: SCL
+      a0: VS
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_6_5V:
+    device_id: F
+    address:
+      a1: GND
+      a0: GND
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_10_12V:
+    device_id: G
+    address:
+      a1: VS
+      a0: VS
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_11_12V:
+    device_id: H
+    address:
+      a1: SDA
+      a0: GND
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_12_3_3V:
+    device_id: I
+    address:
+      a1: VS
+      a0: GND
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_13_3_3V:
+    device_id: J
+    address:
+      a1: VS
+      a0: SDA
+    max_current: 2
+    r_shunt: 0.1
+
+
+  MOBO_21_5V:
+    device_id: K
+    address:
+      a1: GND
+      a0: GND
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_22_5V:
+    device_id: L
+    address:
+      a1: SCL
+      a0: GND
+    max_current: 2
+    r_shunt: 0.1
+
+  MOBO_23_5V:
+    device_id: M
+    address:
+      a1: SDA
+      a0: VS
+    max_current: 2
+    r_shunt: 0.1
+
+  SSD_YELLOW_12V:
+    device_id: N
+    address:
+      a1: SDA
+      a0: SDA
+    max_current: 2
+    r_shunt: 0.1
+
+  SSD_RED_5V:
+    device_id: O
+    address:
+      a1: VS
+      a0: GND
+    max_current: 2
+    r_shunt: 0.1

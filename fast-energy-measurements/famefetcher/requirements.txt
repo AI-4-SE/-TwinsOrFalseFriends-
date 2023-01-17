@@ -1,0 +1,7 @@
+pandas
+pyserial
+bitstring
+numpy
+PyYAML==5.4.1
+paho-mqtt==1.5.1
+bitarray

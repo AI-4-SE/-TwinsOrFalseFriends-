@@ -1,0 +1,202 @@
+<vm name="lrzip">
+  <binaryOptions>
+    <configurationOption>
+      <name>root</name>
+      <outputString>
+      </outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>
+      </parent>
+      <impliedOptions />
+      <excludedOptions />
+      <optional>False</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>encryption</name>
+      <outputString>encryption</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>
+      </parent>
+      <impliedOptions />
+      <excludedOptions />
+      <optional>True</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>compression</name>
+      <outputString>compression</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>
+      </parent>
+      <impliedOptions />
+      <excludedOptions />
+      <optional>True</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>compressionBzip2</name>
+      <outputString>compressionBzip2</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>compression</parent>
+      <impliedOptions />
+      <excludedOptions>
+        <options>compressionGzip</options>
+        <options>compressionLzo</options>
+        <options>compressionZpaq</options>
+        <options>compressionLzma</options>
+      </excludedOptions>
+      <optional>False</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>compressionGzip</name>
+      <outputString>compressionGzip</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>compression</parent>
+      <impliedOptions />
+      <excludedOptions>
+        <options>compressionBzip2</options>
+        <options>compressionLzo</options>
+        <options>compressionZpaq</options>
+        <options>compressionLzma</options>
+      </excludedOptions>
+      <optional>False</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>compressionLzo</name>
+      <outputString>compressionLzo</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>compression</parent>
+      <impliedOptions />
+      <excludedOptions>
+        <options>compressionBzip2</options>
+        <options>compressionGzip</options>
+        <options>compressionZpaq</options>
+        <options>compressionLzma</options>
+      </excludedOptions>
+      <optional>False</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>compressionZpaq</name>
+      <outputString>compressionZpaq</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>compression</parent>
+      <impliedOptions />
+      <excludedOptions>
+        <options>compressionBzip2</options>
+        <options>compressionGzip</options>
+        <options>compressionLzo</options>
+        <options>compressionLzma</options>
+      </excludedOptions>
+      <optional>False</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>compressionLzma</name>
+      <outputString>compressionLzma</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>compression</parent>
+      <impliedOptions />
+      <excludedOptions>
+        <options>compressionBzip2</options>
+        <options>compressionGzip</options>
+        <options>compressionLzo</options>
+        <options>compressionZpaq</options>
+      </excludedOptions>
+      <optional>False</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>unlimitedWindowSize</name>
+      <outputString>unlimitedWindowSize</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>
+      </parent>
+      <impliedOptions />
+      <excludedOptions />
+      <optional>True</optional>
+    </configurationOption>
+    <configurationOption>
+      <name>disableCompressibilityTesting</name>
+      <outputString>disableCompressibilityTesting</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>
+      </parent>
+      <impliedOptions />
+      <excludedOptions />
+      <optional>True</optional>
+    </configurationOption>
+  </binaryOptions>
+  <numericOptions>
+    <configurationOption>
+      <name>level</name>
+      <outputString>level</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>root</parent>
+      <impliedOptions />
+      <excludedOptions />
+      <minValue>1</minValue>
+      <maxValue>9</maxValue>
+      <stepFunction>level + 1</stepFunction>
+    </configurationOption>
+    <configurationOption>
+      <name>processorCount</name>
+      <outputString>
+      </outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>root</parent>
+      <impliedOptions />
+      <excludedOptions />
+      <minValue>1</minValue>
+      <maxValue>4</maxValue>
+      <stepFunction>processorCount + 1</stepFunction>
+    </configurationOption>
+    <configurationOption>
+      <name>maxRam</name>
+      <outputString>*100MB</outputString>
+      <prefix>
+      </prefix>
+      <postfix>
+      </postfix>
+      <parent>root</parent>
+      <impliedOptions />
+      <excludedOptions />
+      <minValue>2</minValue>
+      <maxValue>18</maxValue>
+      <stepFunction>maxRam * 3</stepFunction>
+    </configurationOption>
+  </numericOptions>
+  <booleanConstraints />
+  <nonBooleanConstraints />
+</vm>

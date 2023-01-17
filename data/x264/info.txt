@@ -1,0 +1,18 @@
+version: x264 0.152.2851 (ba24899)
+cluster: zmiy (i5 only)
+benchmark/workload:
+- input: lossless version of the 'Sintel' trailer (y4m, 480p)
+- output: raw H.264 video stream
+configurations: 4608
+properties:
+- iperf (performance / run time)
+- energy (energy consumption)
+- cpu (cpu load)
+fixed time: 210 s = 3.5 min
+average relative standard deviations:
+- iperf: 0.53 %
+- energy: 1.1 %
+notes:
+- 5 repetitions measured for each configuration
+- relative standard deviations included in measurements file
+- case study from bachelor thesis "Performance and Energy Interactions of Configurable Systems"
