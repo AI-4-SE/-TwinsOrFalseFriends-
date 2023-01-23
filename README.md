@@ -88,10 +88,17 @@ python3 scripts/analysis/run_analysis.py ./data/ ./output/
 
 After the execution of the script, you can find several plots and compare them with the plots in the respective RQ folders on our top level.
 The structure is as follows:
-* RQ<Number>
-    * CaseStudy
-        * <PlotType>
-            * <Plots>
+```
+RQ<Number>
+|
+└───CaseStudy
+     |
+     └───<PlotType>
+          |
+          └───<Plots>
+               | plot1.pdf
+               | plot2.pdf
+```
 
 Since we maintain the directory structure of our evaluation, the comparison of these plots should be straightforward.
 You may want to copy the respective files from the Docker container to your machine by executing:
