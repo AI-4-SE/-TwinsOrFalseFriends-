@@ -72,7 +72,7 @@ To install the python packages needed to execute the python scripts, you can ins
 pip3 install -r requirements.txt
 ```
 
-##### Usage
+### Usage
 
 Please note that the execution of the Python script can take several minutes.
 To follow the progress, the Python script prints out the current progress.
