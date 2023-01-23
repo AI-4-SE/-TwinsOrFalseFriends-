@@ -23,8 +23,85 @@ The results of the literature study can be accessed via [Google Docs](https://do
 ## Scripts
 
 All scripts for re-running our empirical evaluation are included in the [scripts](./scripts) directory.
-* The [analysis](./scripts/analysis) directory contains a PyCharm project which generates, based on the measurement data in the [data](./data) directory, all scatter plots and window plots for RQ1 and RQ2.
+* The [analysis](./scripts/analysis) directory contains python scripts which generate, based on the measurement data in the [data](./data) directory, all scatter plots and window plots for RQ1 and RQ2.
 * The [notebooks](./scripts/notebooks) directory contains jupyter notebooks that generates all tables, correlation plots, and regression plots for all RQs. The [requirements](./scripts/notebooks/requirements.txt) can be used to initialize a virtual environment for python (```python3 -m pip install -r requirements.txt```) with the same software that was used in the evaluation.
+
+### Installation
+
+For reproducing our results, we provide a docker container containing scripts for the installation, alternatively, we also provide a description for a [manual setup](#manual-setup) showing the steps to perform on a Linux-based operating system to repoduce the results of this work. 
+
+#### Setup via Dockerfile
+
+To ease the installation of our tool, we provide a [Dockerfile](./Dockerfile) for setting up a docker container.
+Please note that the container will use up to 1 GB of disc storage after the setup is performed.
+
+To apply this file, we rely on docker and refer to the [documentation](https://docs.docker.com/install/linux/docker-ce/ubuntu/) on how to install docker on your Linux operating system.
+
+After docker is installed, make sure that the docker daemon is running. On systemd, you can use ```systemctl status docker``` to check the status of the daemon and ```sudo systemctl start docker``` to start the daemon, if necessary.
+
+Next, download the [Dockerfile](./Dockerfile).
+The container is set up by invoking ```sudo docker build -t twins ./``` in the directory where the Dockerfile is located.
+By invoking this script, all dependencies as described in Section [Manual Setup](#manual-setup) are installed, which might take several minutes.
+
+After setting up the docker container, all required ressources (i.e., packages, programs, and scripts) are installed and can now be used inside the container.
+To begin an interactive session, the command ```sudo docker run -i -t twins /bin/bash``` can be used.
+After starting the interactive session, you can continue [here](#usage).
+
+
+#### Manual Setup
+
+Requirements:
+  * Operating system: Ubuntu
+  * git (for cloning the required repositories)
+  * Python3 and Pip (on Ubuntu: python3-pip)
+
+##### Data
+
+To clone the repository containing the data (variability models, measured performance values, and predicted performance values), use the following commands:
+
+```
+git clone https://github.com/AI-4-SE/TwinsOrFalseFriends.git
+cd TwinsOrFalseFriends
+```
+
+##### Python Packages
+
+To install the python packages needed to execute the python scripts, you can install the dependencies from ```requirements.txt``` in the top folder of the repository by executing 
+
+```
+pip3 install -r requirements.txt
+```
+
+##### Usage
+
+Please note that the execution of the Python script can take several minutes.
+To follow the progress, the Python script prints out the current progress.
+
+To execute the script, you have to create a new output folder:
+
+```
+mkdir -p output
+python3 scripts/analysis/run_analysis.py ./data/ ./output/
+```
+
+### Comparison
+
+After the execution of the script, you can find several plots and compare them with the plots in the respective RQ folders on our top level.
+The structure is as follows:
+* RQ<Number>
+    * CaseStudy
+        * <PlotType>
+            * <Plots>
+
+Since we maintain the directory structure of our evaluation, the comparison of these plots should be straightforward.
+You may want to copy the respective files from the Docker container to your machine by executing:
+
+```
+docker cp <DockerID>:/application/TwinsOrFalseFriends/output/ /tmp/output/
+```
+Assuming that you are using Linux or Mac, the command will copy the whole folder into your ```/tmp``` folder.
+If you are using Windows, adjust the command accordingly.
+The DockerID is the ID of the docker container that you can retrieve using ```docker container ls -a```.
 
 ## RQ1.1 & RQ1.2:
 
