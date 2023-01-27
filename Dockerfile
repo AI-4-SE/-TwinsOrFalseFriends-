@@ -6,6 +6,9 @@ FROM ubuntu:22.04
 # Set the working directory to /app
 WORKDIR /application
 
+# create output directory
+RUN mkdir -p output
+
 # Set up specific apt package repositories (if needed)
 RUN apt update
 

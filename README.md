@@ -28,7 +28,7 @@ All scripts for re-running our empirical evaluation are included in the [scripts
 
 ### Installation
 
-For reproducing our results, we provide a docker container containing scripts for the installation, alternatively, we also provide a description for a [manual setup](#manual-setup) showing the steps to perform on a Linux-based operating system to repoduce the results of this work. 
+For reproducing our results, we provide a docker container containing scripts for the installation, alternatively, we also provide a description for a [manual setup](#manual-setup) showing the steps to perform on a Linux-based operating system to repoduce the results of this work.
 
 #### Setup via Dockerfile
 
@@ -66,7 +66,7 @@ cd TwinsOrFalseFriends
 
 ##### Python Packages
 
-To install the python packages needed to execute the python scripts, you can install the dependencies from ```requirements.txt``` in the top folder of the repository by executing 
+To install the python packages needed to execute the python scripts, you can install the dependencies from ```requirements.txt``` in the top folder of the repository by executing
 
 ```
 pip3 install -r requirements.txt
@@ -82,16 +82,23 @@ To execute the script, you have to create a new output folder:
 ```
 mkdir -p output
 python3 scripts/analysis/run_analysis.py ./data/ ./output/
+python3 scripts/analysis/analysis_RQ1.py ./data/ ./output/
+python3 scripts/analysis/analysis_RQ2.py ./data/ ./output/
+python3 scripts/analysis/analysis_RQ3.py ./data/ ./output/
 ```
 
 ### Comparison
 
-After the execution of the script, you can find several plots and compare them with the plots in the respective RQ folders on our top level.
+After the execution of the script, you can find several plots and compare them with the plots in the respective RQ folders on our top level and with the plots in the output folder.
 The structure is as follows:
 ```
+output
+| examplesystems.pdf
+| rq2_example.pdf
+| rq3_overview_small.pdf
 RQ<Number>
 |
-└───CaseStudy
+└───<CaseStudy>
      |
      └───<PlotType>
           |
