@@ -29,7 +29,7 @@ bins = [-1, -0.7, -0.3, 0.3, 0.7, 1]
 
 
 def option_wise_correlation_table(input_path):
-    in_path = input_path+'./../RQ2/'
+    in_path = input_path+'RQ2/'
     file_corr = 'README_post.csv'
     file_window_corr = 'README_local_error.csv'
     file_stat = 'README_post_mean_std.csv'
@@ -285,18 +285,17 @@ def print_usage() -> None:
 
 
 def main() -> None:
+    if len(sys.argv) == 3:
+        # Read in the path to the case study data
+        input_path = sys.argv[1]
 
-    if len(sys.argv) != 3:
-        print_usage()
-        exit(0)
+        # Read in the output path of the plots
+        output_path = sys.argv[2]
+    else:
+        input_path = './data/'
+        output_path = './output/'
 
-    # Read in the path to the case study data
-    input_path = sys.argv[1]
-
-    # Read in the output path of the plots
-    output_path = sys.argv[2]
-
-    df_error = option_wise_correlation_table(input_path)
+    df_error = option_wise_correlation_table(output_path)
     options_influence_on_corr(input_path, output_path, df_error)
 
 

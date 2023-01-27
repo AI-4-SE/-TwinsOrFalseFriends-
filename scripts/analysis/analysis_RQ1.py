@@ -371,15 +371,15 @@ def print_usage() -> None:
 
 def main() -> None:
 
-    if len(sys.argv) != 3:
-        print_usage()
-        exit(0)
+    if len(sys.argv) == 3:
+        # Read in the path to the case study data
+        input_path = sys.argv[1]
 
-    # Read in the path to the case study data
-    input_path = sys.argv[1]
-
-    # Read in the output path of the plots
-    output_path = sys.argv[2]
+        # Read in the output path of the plots
+        output_path = sys.argv[2]
+    else:
+        input_path = './data/'
+        output_path = './output/'
 
     systems = [os.path.join(input_path, system) for system in os.listdir(input_path)]
     measurements_file = 'measurements.csv'

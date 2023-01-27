@@ -7,15 +7,20 @@ from research_question import ResearchQuestion
 from research_question_1 import ResearchQuestion1
 from research_question_2 import ResearchQuestion2
 
+import analysis_RQ1
+import analysis_RQ2
+import analysis_RQ3
+
+
 FM = "FeatureModel.xml"
 Measurements = "measurements.csv"
 Alternative = "selected_alternative.txt"
 Results_File = "README_POST.md"
 
 Research_Questions: List[ResearchQuestion] = [
-                                                    # ResearchQuestion1(),
-                                                    ResearchQuestion2()
-                                                   ]
+                                                ResearchQuestion1(),
+                                                ResearchQuestion2()
+                                               ]
 
 
 def print_usage() -> None:
@@ -93,6 +98,10 @@ def main() -> None:
 
     for rq in Research_Questions:
         rq.finish(os.path.join(output_path, rq.name))
+
+    analysis_RQ1.main()
+    analysis_RQ2.main()
+    analysis_RQ3.main()
 
 
 if __name__ == "__main__":

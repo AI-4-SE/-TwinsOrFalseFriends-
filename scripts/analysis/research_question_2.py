@@ -9,7 +9,7 @@ import pandas as pd
 
 from research_question import ResearchQuestion
 from case_study import CaseStudy
-from scripts.analysis.feature import Feature
+from feature import Feature
 
 
 class ResearchQuestion2(ResearchQuestion):
