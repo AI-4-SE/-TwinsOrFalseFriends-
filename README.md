@@ -82,9 +82,6 @@ To execute the script, you have to create a new output folder:
 ```
 mkdir -p output
 python3 scripts/analysis/run_analysis.py ./data/ ./output/
-python3 scripts/analysis/analysis_RQ1.py ./data/ ./output/
-python3 scripts/analysis/analysis_RQ2.py ./data/ ./output/
-python3 scripts/analysis/analysis_RQ3.py ./data/ ./output/
 ```
 
 ### Comparison
