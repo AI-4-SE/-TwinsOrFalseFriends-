@@ -35,16 +35,18 @@ For reproducing our results, we provide a docker container containing scripts fo
 To ease the installation of our tool, we provide a [Dockerfile](./Dockerfile) for setting up a docker container.
 Please note that the container will use up to 1 GB of disc storage after the setup is performed.
 
-To apply this file, we rely on docker and refer to the [documentation](https://docs.docker.com/install/linux/docker-ce/ubuntu/) on how to install docker on your Linux operating system.
+To apply this file, we rely on docker and refer to the [documentation](https://docs.docker.com/install/linux/docker-ce/ubuntu/) on how to install docker on your Linux operating system. This [tutorial](https://www.baeldung.com/linux/docker-run-without-sudo) enables to run docker commands on Linux without the ```sudo''' prefix.
 
-After docker is installed, make sure that the docker daemon is running. On systemd, you can use ```systemctl status docker``` to check the status of the daemon and ```sudo systemctl start docker``` to start the daemon, if necessary.
+For installing docker on Windows we refer to this [documentation](https://docs.docker.com/desktop/install/windows-install/).
+
+After docker is installed, make sure that the docker daemon is running. On systemd, you can use ```systemctl status docker``` to check the status of the daemon and ```systemctl start docker``` to start the daemon, if necessary.
 
 Next, download the [Dockerfile](./Dockerfile).
-The container is set up by invoking ```sudo docker build -t twins ./``` in the directory where the Dockerfile is located.
+The container is set up by invoking ```docker build -t twins ./``` in the directory where the Dockerfile is located.
 By invoking this script, all dependencies as described in Section [Manual Setup](#manual-setup) are installed, which might take several minutes.
 
 After setting up the docker container, all required ressources (i.e., packages, programs, and scripts) are installed and can now be used inside the container.
-To begin an interactive session, the command ```sudo docker run -i -t twins /bin/bash``` can be used.
+To begin an interactive session, the command ```docker run -i -t twins /bin/bash``` can be used.
 After starting the interactive session, you can continue [here](#usage).
 
 

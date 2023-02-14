@@ -1,0 +1,5 @@
+We claim the available and reusable badges, since (1) we have provided all energy and performance measurement scrips and (2) instuctions on how to set up the energy measurement system. (3) We make all raw data needed to execute the analysis scripts publicly available, and (4) we provide the scripts that we used for data processing.
+As one would need multiple years of CPU time for reproducing our results (which includes whole population measurement data with measurement repetitions), we provide also the raw data to short-cut this costly process on demand.
+For simplicity, we provide a dockerfile in addition to a manual setup on Linux.
+Overall, only basic knowledge with Linux and (optionally) Docker is needed for the replication of our results.
+
