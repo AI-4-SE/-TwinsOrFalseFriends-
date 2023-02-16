@@ -59,11 +59,10 @@ Requirements:
 
 ##### Data
 
-To clone the repository containing the data (variability models, measured performance values, and predicted performance values), use the following commands:
+To clone the repository containing the data (variability models, measured performance values, and predicted performance values), use the following command:
 
 ```
 git clone https://github.com/AI-4-SE/TwinsOrFalseFriends.git
-cd TwinsOrFalseFriends
 ```
 
 ##### Python Packages
@@ -79,9 +78,10 @@ pip3 install -r requirements.txt
 Please note that the execution of the Python script can take several minutes.
 To follow the progress, the Python script prints out the current progress.
 
-To execute the script, you have to create a new output folder:
+To execute the script, you have to run the following commands:
 
 ```
+cd TwinsOrFalseFriends
 mkdir -p output
 python3 scripts/analysis/run_analysis.py ./data/ ./output/
 ```
