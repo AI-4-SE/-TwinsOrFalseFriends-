@@ -1,0 +1,2 @@
+For running the analysis we recommend to use a machine with at least 16 GB RAM and i7-10710U CPU with 1.10GHz. This is the system configuration on which we tested our analysis. 
+Because we provide a Docker container there are no specific requirements for the operating system.

@@ -18,7 +18,7 @@ We used the given data for our empirical evaluation.
 
 ## Literature Study
 
-The results of the literature study can be accessed via [Google Docs](https://docs.google.com/spreadsheets/d/19nsX_jk3pscV406hGnr3gaLPWsjs3pLpRtXL1sB6lnI/edit?usp=sharing).
+The results of the literature study data can be found in the [literature](./literature-study-data) directory. We also provide the table as [Google Docs](https://docs.google.com/spreadsheets/d/19nsX_jk3pscV406hGnr3gaLPWsjs3pLpRtXL1sB6lnI/edit?usp=sharing).
 
 ## Scripts
 

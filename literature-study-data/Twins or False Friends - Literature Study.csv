@@ -1,0 +1,687 @@
+Title,Year,Approach,Measured Property,Variability,Measurement Properties,Result,Correlation?,Validity,Software Systems,Comments,References,
+Reviewer Suggested Literature,,,,,,,,,,,,
+,,,,,,,,,,,,
+Green tracker: a tool for estimating the energy consumption of software,2010,,,,,"no energy.
+no correlation analysis",,,,,,
+Measuring Application Software Energy Efficiency,2012,"performance-energy measurement stdy of management information systems
+variying HW and SWS while maintaining WL
+conclusion: SW is important / underrated property in SE","- energy
+- performance",HW SW,,the fastest application is also the most energy efficient,pos. corr.,,,,,
+GreenOracle: Estimating Software Energy Consumption with Energy Measurement Corpora,2016,,,,,Already in the Literature Analyse,,,,,,
+Green AI: do deep learning frameworks have different costs?,2022,,,,,Already in the Literature Analyse,,,,,,
+,,,,,,,,,,,,
+Initial Set,,,,,,,,,,,,
+,,,,,,,,,,,,
+Eflect: Porting Energy-Aware Applications to Shared Environments,2022,modeling energy consumption per application in an multi application system,"- energy consumption
+- power",SW,,no perf.,,,,,,
+Green AI: Do Deep Learning Frameworks Have Different Costs?,2022,Energy consumption analysis of DNNs with different examples,"- energy
+- performance","HW components
+SW DNNs
+WL",,very strong positive correlation (p. 6),pos. corr.,,,,,
+EREBA: Black-box Energy Testing of Adaptive Neural Networks,2022,model for identifacation of high energy demanding inputs for AdNNs,Energy,,,no perf.,,,,,,
+Taming Energy Consumption Variations in Systems Benchmarking,2020,Impact analysis of controllable variables while measuring energy consumption,"- Energy
+- Performance","HW, WL, CFG",,no correlation analysis,,,,,,
+"SPEC CPU2017: Performance, Event, and Energy Characterization on the Core i7-8700K",2019,SPEC CPU 2017 Benchmark Suite Execution,"- Energy
+- Performance","WL, CFG (2: threads, rate)",,no correlation analysis,,,,,,
+Measuring the Energy Efficiency of Transactional Loads on GPGPU,2019,GPU Energy Efficiency of Devices,"- Energy
+- Performance (Time?)","HW, WL",,"perf scales linarly with load
+energy not (depending on the device)",No correlation,,,,,
+Alternating Blind Identification of Power Sources for Mobile SoCs,2022,energy consumption prediction of HW components via thermal sensors and total energy consumption,,,,no perf.,,,,,,
+Predicting Server Power Consumption from Standard Rating Results,2019,predicting power consumption of servers using standard power rating tools,,"HW, SW, WL",,no correlation analysis,,,,,,
+The Impact of Instant Messaging on the Energy Consumption of Android Devices,2021,"SPEC CPU2017: Performance, Event, and Energy Characterization on the Core i7-8700K",,,,no perf.,,,,,,
+Mining API Interactions to Analyze Software Revisions for the Evolution of Energy Consumption,2021,energy evolution of software revisions based on their API interactions,"Energy
+API calls",,"Monsoon High Voltage Power Monitor (HVPM)
+API calls",API calls are often a good proxy for energy consumption,pos. Corr,,,,,
+Mining Energy-Related Practices in Robotics Software,2021,"quantifying and characterizing the main causes, solutions, and eventual trade-offs of roboticists’ issues with respect to their energy efficiency",,,,no measurements,,,,,,
+Mining the ROS ecosystem for Green Architectural Tactics in Robotics and an Empirical Evaluation,2021,"energy consumption of 4 different architectural tactics (design decisions; e.g. sampling rate of a sensor)
+Independent variables are configuration options of the robter software",,,,"no perf.
+-> fixed experiment time, but the path traveled is not recorded",,,,,,
+On Energy Debt: Managing Consumption on Evolving Software,2020,Presentation of the concept energy dept,,,,,,,,,0,
+ReviewViz: Assisting Developers Perform Empirical Study on Energy Consumption Related Reviews for Mobile Applications,2020,Presentation of Visualisation Tool,,,,,,,,,0,
+Greenspecting Android Virtual Keyboards,2020,"1. let framework automatically write predefined text
+2. let 40 user write the same text","- Energy SW-based
+- Performance Elapsed Time","5 virtual android keyboards
+2 modes (normal, minimal features)",Measuring time and energy to write 100 random words,"lees energy consumption of virtual keyboard 
+-> more execution time",Neg. Corr,,,,6,x
+Should energy consumption influence the choice of Android third-party HTTP libraries?,2020,- measuring energy consumption and performance of third-party libraries that handle HTTP,Energy and Time,8 different third-party librarys,Monsoon power monitor 5 kHz,Performance and Energy of only some apps correlates,"No correlation
+pos corr.",,,,12,x
+Evaluating the Impact of Caching on the Energy Consumption and Performance of Progressive Web Apps,2020,Execute Browser Caching,"Cache empty or populated
+Empty cache implies reading of all data from server
+populated cahe implies not all data need to be readed","9 PWAs (progressive web apps)
+page load time
+energy consumption of phone","energy measured by dumpsys, googles system information tool
+performance is start loading page until page is loaded","caching has an effect on performance
+but not on energy consumption",No correlation,,,,4,x
+Calm Energy Accounting for Multithreaded Java Applications,2020,"software energy measurements at different levels of granularity
+sampling based performance and energy profiling
+overhead evaluation","Time
+Energy","- Software systems
+- methods","RAPL
+async profiler",energy consumption and execution time do not always correspond,Pos.Corr,,,,27,x
+Automated Construction of Energy Test Oracles for Android,2020,"Mobile Phone Domain
+Monitoring HW interfaces of apps to predict energy bugs
+Use LSTM+Attention to learn before, during and after status of the phone
+Learn from known bug-status dataset","Performance: temporal changes of HW status of the app
+Energy bug: True / False classification","uDroid energy aware mutation testing framework generates dataset
+based on real energy bugs
+",Status of all sensors and devices of a phone,Phone status patterns (and changes of these patterns) can hint to ernergy bugs,,,,,7,x
+Performance and energy consumption of HPC workloads on a cluster based on Arm ThunderX2 CPU,2020,Performance vs Energy consumption of HPC,,"Different HW (3 HPC)
+Compiler Optimization Config as WL","- Power monitoring
+- RAPL",energy cionsumption is almost proportional to execution time (for some systems),"Pos.Corr
+no corr.",,,,6,x
+Correlation of Performance Optimizations and Energy Consumption for Stencil-Based Application on Intel Xeon Scalable Processors,2020,Measure Performance and Energy consumption of different opimization Features of an Intel MultiCore CPU,"Energy consumption SW + HW based
+BM Execution Time",Optimization steps of MPDATA application,"Time
+Energy RAPL + power meter (100kHz 0.1%)","for some optimization steps performance as well as energy consumtion correlate
+for other only one property improves, the oter stays constant",Pos.Corr,,,,15,x
+Investigating the Correlation between Performance Scores and Energy Consumption of Mobile Web Apps,2020,"Compare Energy Consumption with performance metric BB
+of showing an webpage on the moile browser","- Energy SW-based
+- Performance Google performace metrics score (elapsed time to events)",selection of web pages (most visited corpus),"- time until events happen
+- energy is modeled with Greenspector",If webpage has better perormance score it significantly consume less energy.,Pos. Corr (they said neg. because axes swap),!,,,7,x
+A Taxonomy and Survey of Power Models and Power Modeling for Cloud Servers,2020,,,,,,,,,,27,x
+Recommending energy-efficient Java collections,2019,"Analysis of java collections
+Replace collections test again energy",Energy,"12 Subject systms
+HW: Desktop/Laptop/Handy","Energy measure SW
+Performance auf suppl website",,Suppl,And perf?,,,8,x
+Search-based energy testing of Android,2019,"Finding Energy defects by:
+generating tests for Apps (Android) including external influences:
+Lifecycle, Hardware, Environment",Energy,"Lifecycle, Hardware, Environment
+25 Apps",,They find more defects if environment is included in test generation,,No perf logged,,,0,
+GreenBundle: An Empirical Study on the Energy Impact of Bundled Processing,2019,"Model View Presenter Pattern (from of Model View Controller)
+Presnter is an additional Proxy between model and view to decide when to update (now, drop, bundle)","Energy, View update rate","design pattern, #events, #event emitters","ina159, ina219",Lower GUI Update rate -> less energyconsumption,Neg. Corr,,,,36,x
+Rotten green tests,2019,checks whether unit tests assert true when they should not,,,,,,,,,0,
+"On the performance, availability and energy consumption modelling of clustered IoT systems",2019,"- Energy consumption of sensor networks
+- A destinction in their energy consumption is made between seven states of the sensors
+- ",,"HW
+WL",- Energy values from data sheets,"for all states a sensor network can have, the mean energy consumption of transmissions per time decreases if more packages are transmitted",Pos.Corr,,,,0,
+Assessing mobile applications performance and energy consumption through experiments and Stochastic models,2019,- comparing performance and energy consumption of mobild phones working with cloud,"Performance
+Energy","different WLs
+different configurations
+different setups",Modeled Energy,,"3G vs WiFi -> Neg Corr
+(Experiment setups -> No Corr)",,,,7,x
+Analysis of Performance and Energy Consumption of Wearable Devices and Mobile Gateways in IoT Applications,2019,- is computational offloading (computing on wearable devices instead of phone) more efficient in terms of performance and energy consumption,"Performance
+Energy","Different mobile/wearable devices
+",,"- not always better performance brings better energy efficiency
+- the relation of energy consumption and execution time may not be consistent when applying offloading techniques",sometimes No Correlation,"Not clear how energy is measured
+no correlation analysis",LOCUS’s BM,,3,x
+Software Development Lifecycle for Energy Efficiency:Techniques and Tools,2019,"Lerterature Study 
+Software Development Live Cycle focussing energy efficiency",,-,-,"Conclusion based on one example study [Kambadur und Kim 2014]
+possible to gain performance and energy savings by tuning configurations and parameters",,,,,34,x
+GreenScaler: training software energy models with automatic test generation,2019,"- Build accurate energy models from measured corpus
+- automatic test generation
+- test selection heuristic for measuring energy (differs from perf. heuristics)
+- Lasso/SVR/Ridge","- energy 
+- Performance",,,"- No: methods
+- No: classes
+- No: line
+- No: block
+- Weak:testing time",Pos.Corr,,"- Klaxon
+- Password Hash
+- Storyhoard
+- Many more Apps",,26,x
+,,,,,,,,,,SUM,225,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+2nd Iteration,,,,,,,,,,,,
+,,,,,,,,,,,,
+Not Relevant,,,,,,,,,,,,
+NO Correlation,,,,,,,,,,,,
+Positive Correlation (improving performance decreases energy consumption),,,,,,,,,,,,
+"Negative Correlation (Improve eighter performance or decrease energy consumption, the other gets worse)",,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+Energy and Policy Considerations for Modern Deep Learning Research,2020,empirical measurements ofdeep learning approaches,,,,no corr or tradeoff analysis,,,,,,
+ECOSystem: managing energy as a first class operating system resource,2002,designeing an energy model for the OS + experiments,,,,no corr or tradeoff analysis,,,,,,
+AppScope: Application Energy Metering Framework for Android Smartphones using Kernel Activity Monitoring,2015,kernel module for accurately modeling smartphones energy consumption,,,,no perf.,,,,,,
+Eon: a language and runtime system for perpetual systems,2007,energy aware programming language,,,,no perf. no energy.,,,,,,
+Power Containers: An OS Facility for Fine-Grained Power and Energy Management on Multicore Servers,2013,online server per-request power control ,,,,no perf.,,,,,,
+Energy Management in Mobile Devices with the Cinder Operating System,2011,incooperate energy consumption into mobile phones OS,,,,no corr or tradeoff analysis,,,,,,
+Aequitas: Coordinated Energy Management Across Parallel Applications,2016,co-existing applications coordinate power management decisions,,HW: CPU frequency,,energy can be saved with only small performance loss,Neg. Corr,,,,,
+eDoctor: Automatically Diagnosing Abnormal Battery Drain Issues on Smartphones,2013,Automatically detect abnormal battery usage in mobile phones,,,,no perf.,,,,,,
+Power sandbox: power awareness redefined,2018,mobile phone set of kernel extensions that calc power consumption per application,,,,no corr or tradeoff analysis,,,,,,
+Energy-aware adaptation for mobile applications,1999,OS and applincation configuration options influence energy consumption and time,,cfg,,the lnear model fitts well,pos. corr.,,,,,
+Vgreen: A system for energy efficient computing in virtualized environments,2009,softwarte system for energy efficient computation,,,,no corr or tradeoff analysis,,,,,,
+E2-Train: Training State-of-the-art CNNs with Over 80% Energy Savings,2019,while doing image classification dropping unneccessary computations at different levels to reduce energy consumption while maintainging accuracy,,,,no perf.,,,,,,
+Policy Considerations for Deep Learning in NLP,2020,energy cost analysis for NLP,,,,no corr or tradeoff analysis,,,,,,
+Analysis of RAPL Energy Prediction Accuracy in a Matrix Multiplication Application on Shared Memory,2017,comparison of energy values gathered by rapl and real measurements,,,,no perf.,,,,,,
+An Empirical Study of Practitioners’ Perspectives on Green Software Engineering,2016,"developers perspective on green IT
+questionaire and interview",,,,no own measurements,,,,,,
+Evaluating the Energy Efficiency of Deep Convolutional Neural Networks on CPUs and GPUs,2016,"energy consumption of different settings of DNNs
+trade-off analysis",,cfg,,"low cpu frequency and high cpu frequency have both high total energy consumption
+medium cpu frequency has energy consumption 
+performance goes linearly with frequency",No correlation,,,,,
+Energy-Efficient Machine Learning on the Edges,,"eclipse plugin
+method-level energy optiomization of Java ML algorithms",,,,no corr or tradeoff analysis,,,,,,
+Rapid and accurate energy models through calibration with IPMI and RAPL,,,,,,,,,,,,
+EClass: An Execution Classification Approach to Improving the Energy-Efficiency of Software via Machine Learning,2012,energy prediction model based on ML withtrade-off tuning parameter,,CPU frequency,,tuning parameter tunes linearly between best energy saving or best performing option,Neg. Corr. ,,,,,
+Estimation of energy consumption in machine learning,2019,review of energy measurement approaches,-,-,-,no own measurements,,,,,,
+Estimating Software Energy Consumption with Machine Learning Approach by Software Performance Feature,2020,perf events help estimating software energy consumption,,,,no perf.,,,,,,
+A Validation of DRAM RAPL Power Measurements,2016,validation of RAPL RAM measurements,,,,no perf.,,,,,,
+Dynamic Voltage Frequency Scaling Simulator for Real Workflows Energy-Aware Management in Green Cloud Computing,2017,Optimizing energy consumption by DVFS scaling ,,,,no corr or tradeoff analysis,,,,,,
+The Model Is Not Enough: Understanding Energy Consumption in Mobile Devices,2012,modeling code level power consumption correlation,,,,no perf.,,,,,,
+Pinpoint the Joules: Unifying Runtime-Support for Energy Measurements on Heterogeneous Systems,2020,tool for SW energy consumption using dofferent sources of power/energy values,,,,no perf.,,,,,,
+Energy-efficient Amortized Inference with Cascaded Deep Classifiers,2017,classification with multiple classifiers that increase in complexity,,,,no energy measurements,,,,,,
+Experimental Characterization of Variation in Power Consumption for Processors of Different generations,2019,analyzing server CPU perwe consumption differernce of the sme CPU,,,,no perf.,,,,,,
+Potential Effects on Server Power Metering and Modeling,2018,temperature volatage and rick position effects on power consumption of servers,,,,no perf.,,,,,,
+Energy Efficiency of Thermal-Aware Job Scheduling Algorithms under Various Cooling Models,2009,energy savings by thermal-based model scheduler,,,,no corr or tradeoff analysis,,,,,,
+An Empirical Survey of Performance and Energy Efficiency Variation on Intel Processors,2017,prcessor frequency correlated with performance,,,,no corr or tradeoff analysis,,,,,,
+RAPL in Action: Experiences in Using RAPL for Power Measurements,2018,experiments validating rapls energy measurement accuracy,,,,no corr or tradeoff analysis,,,,,,
+Variations in CPU Power Consumption,2016,comparing different cpus in terms of frequency- energy - lead correlation,,"WL, HW",,no perf.,,,,,,
+Analyzing and Mitigating the Impact of Manufacturing Variability in Power-Constrained Supercomputing,2015,empirical measurements of HPC scheduling with power constraints,,HW,,improved performance with power constraint,No correlation,,,,,
+Predicting the Performance and the Power Consumption of MPI Applications With SimGrid,2017,power and performance simulation framework,,,,no corr or tradeoff analysis,,,,,,
+Your Cluster is not Power Homogeneous: Take Care when Designing Green Schedulers!,2013,exploring CPU driven heterogenety of clusters,,,,no perf.,,,,,,
+The Next 700 CPU Power Models,2019,power model based on selected performance counters,,,,no perf.,,,,,,
+Predicting the Energy Consumption of MPI Applications at Scale Using a Single Node,2017,energy consumption model for HPC nodes,,,,no corr or tradeoff analysis,,,,,,
+Runtime-Guided Mitigation of Manufacturing Variability in Power-Constrained Multi-Socket NUMA Nodes,2016,investigating performance energy consumption balance of Mulit CPU systems,,HW,,balance between energy and time -> trade-off if not in balance,"Neg. Correlation, no correlation",,,,,
+Measuring Energy and Power with PAPI,2012,PAPI tool presentation,,,,no perf.,,,,,,
+"Looking Back on the Language and Hardware Revolutions: Measured Power, Performance, and Scaling",2011,empirical measurements ,"energy, performance","WL, HW",,HW (CPU) specific no correlation when increasing clock speed,No correlation,,,,,
+Impact of thread and frequency scaling on performance and energy in modern multicores: a measurement-based study,2014,empirical study investigating energy-performance trade-off,,"thread scaling, frequency scaling",,decreasing CPU freq. increases worsen performance but improves energy consumption,Neg. Corr.,,,,,
+Predicting Power Consumption in Virtualized Environments,2016,power consumption of differernt WLs in virtual environments,,,,no perf.,,,,,,
+Univariate Interpolation-based Modeling of Power and Performance,2016,power model improvement by interpolating unseen data,,,,no corr or tradeoff analysis,,,,,,
+Run-time Prediction of Power Consumption for Component Deployments,2018,power consumption model for job placement and rescheduling on clusters based on power profile and current utilization,,,,no perf.,,,,,,
+Dynamic resource allocation and power management in virtualized data centers,2010,data center resource allocation approach,,,,no corr or tradeoff analysis,,,,,,
+Exploiting performance counters to predict and improve energy performance of HPC systems,2014,evaluation of suitability of performance counter as input for power models in HPC,,"HW, P, WL, cfg",,"optimizing only CPUs leads to energy savings with small performance loss
+optimizing CPU, Disc, Network saves energy while maintaining performance","No. corr, neg. corr",,,,,
+Modeling and analyzing power management policies in server farms using Stochastic Petri Nets,2012,novel cost-aware job scheduling algorithm,,,,no corr or tradeoff analysis,,,,,,
+Model-Based Energy Efficiency Analysis of Software Architectures,2015,a systems power consumption model combined with a performance prediction approach,,,,no perf.,,,,,,
+A Study on the Use of Performance Counters to Estimate Power in Microprocessors,2013,power podel based on minima set of performance counters,,,,"not run time, but: 
+performance counter correlate positive, negatice and not at all with power drawn",,,,,,
+A Comparison of High-level Full-system Power Models,2008,empirical study of testing power models against each other,,,,no perf.,,,,,,
+SoftPower: Fine-grain Power Estimations Using Performance Counters,2010,energy model based on performance hw counters,,,,no perf.,,,,,,
+Run-time Energy Consumption Estimation Based on Workload in Server Systems,2008,energy model based on performance hw counters,,,,no perf.,,,,,,
+Accurate and Efficient Regression Modeling for Microarchitectural Performance and Power Prediction,2006,"power and performance regression models
+microarchitecture HW space prediction",,"BM, C",,no corr or tradeoff analysis,,,,,,
+ORION 2.0: A Fast and Accurate NoC Power and Area Model for Early-Stage Design Space Exploration,2009,dynamic power modeling tool,,,,no perf.,,,,,,
+"Mistral: Dynamically Managing Power, Performance, and Adaptation Cost in Cloud Infrastructures",2010,power performance managing model for cloud systems,,,,no corr or tradeoff analysis,,,,,,
+Runtime Power Monitoring in High-End Processors: Methodology and Empirical Data,2003,combining multiple sources of power information in one model,,,,no perf.,,,,,,
+Power Provisioning for a Warehouse-sized Computer,2007,optimize number of servers for a given power budget,,,,no corr or tradeoff analysis,,,,,,
+Full-system power analysis and modeling for server environments,2006,energy model based on user level system events,,,,no perf.,,,,,,
+A System for Online Power Prediction in Virtualized Environments Using Gaussian Mixture Models,2010,power prediction model for VMs using architectural metrics for prediction,,,,no perf.,,,,,,
+Power Prediction for Intel XScale R Processors Using Performance Monitoring Unit Events,2005,performance counter model for predicting energy consumption,,,,no perf.,,,,,,
+Performance and Power Modeling in a Multi-programmed Multi-core Environment,2010,perwer model based on performance metrics,,,,no corr or tradeoff analysis,,,,,,
+Complete System Power Estimation Using Processor Performance Events,2012,power model of PC components based on performance counters,,,,no corr or tradeoff analysis,,,,,,
+A Methodology to Predict the Power Consumption of Servers in Data Centres,2011,energy consumption model at server level,,,,no perf.,,,,,,
+Energy Efficiency of Hierarchical Server Load Distribution Strategies,2015,analysis of load distribution on hierarcical servers on energy consumption,,,,no perf.,,,,,,
+JouleSort: A Balanced Energy-efficiency Benchmark.,2007,energy efficient sorting algorithm,,,,no corr or tradeoff analysis,,,,,,
+Energy benchmarks: a detailed analysis.,2020,empirical analysis of benchmarks,,,,no corr or tradeoff analysis,,,,,,
+GPUWattch: enabling energy optimizations in GPGPUs.,2013,measuring energy consumption and performance loss of GPUs of micro benchmarks,,"WL, WL level",,energy savings brings no change in performance or a small performance loss.,"No. corr, neg. corr",,,,,
+Improving GPGPU Energy-Efficiency through Concurrent Kernel Execution and DVFS,2015,approach with concurrent kernel execution and dvfs to reduce eenrgy consumption,,,,no perf.,,,,,,
+"Energy, Power, and Performance Characterization of GPGPU Benchmark Programs.",2016,analyzing changing frequency or implementation on perwer and performance,,,,no corr or tradeoff analysis,,,,,,
+The Case for Energy-Proportional Computing,2007,describing servers energy consumption evolution,,,,no own measurements,,,,,,
+GPGPU Performance and Power Estimation Using Machine Learning,2015,GPU power modeling with performance counters,,,,no corr or tradeoff analysis,,,,,,
+Analysis of the Influences on Server Power Consumption and Energy Efficiency for CPU-Intensive Workloads,2015,Workload driven energy efficiency analysis,,"WL, WL level, HW",,no perf.,,,,,,
+Identifying Shades of Green: The SPECpower Benchmarks.,2009,presentation of the spec energy BM,,,,no own measurements,,,,,,
+Performance and Power Analysis of High-Density Multi-GPGPU Architectures: A Preliminary Case Study.,2015,speedup and energy increase of different GPU clusters,,HW,,faster GPUs consume more energy,neg. corr.,,,,,
+Warped gates: gating aware scheduling and power gating for GPGPUs.,2013,GPU Idle time optimization to reduce energy consumption while maintaining performance,,cfg,,reduces energy consumption while maintaining performacne,No correlation,,,,,
+Performance/energy trade-off in scientific computing: the case of ARM big.LITTLE and Intel Sandy Bridge,2014,empirical study on the tradeoff between energy consumption and performance of different CPU architectures,,HW,,slower CPUs consume less energy -> trade-off,neg. corr.,,,,,
+A distributed and self-calibrating model-predictive controller for energy and thermal management of high-performance multicores,2011,local interacting power controllers to reduce model complexity and performance penalty,,"HW, cfg",,no corr or tradeoff analysis,,,,,,
+Temperature-constrained power control for chip multiprocessors with online model estimation,2009,Energy model based on performance counters,,,,no corr or tradeoff analysis,,,,,,
+Real Time Power Estimation and Thread Scheduling via Performance Counters,2009,Energy model based on performance counters,,,,no corr or tradeoff analysis,,,,,,
+Understanding the Sources of Power Consumption in Mobile SoCs,2018,empirical evaluation of factors of energy consumption,,"WL, HW",,same enrgy consumption but performance speedup for waster cpus,No correlation,,,,,
+Post-silicon power mapping techniques for integrated circuits.,,,,,,,,,,,,
+Blind identification of thermal models and power sources from thermal measurements.,2018,"model combiming total power and fine-grained thermal measurements
+getting fine-grained power",,,,no perf.,,,,,,
+Power Estimation Techniques for Integrated Circuits,1995,survey of circuit power modeling techniques,,,,no per.,,,,,,
+P 4 : Phase-Based Power/Performance Prediction of Heterogeneous Systems via Neural Networks,2017,"cross plattform power and performance prediction framework
+characterizes computing plattforms with a set of BMs",,,,no corr or tradeoff analysis,,,,,,
+"Mobile CPU’s Rise to Power: Quantifying the Impact of Generational Mobile CPU Design Trends on Performance, Energy, and User Satisfaction",2016,mobile cpu energy and performance regression/development over several years,,,,no corr or tradeoff analysis,,,,,,
+Power Mapping and Modeling of Multi-core Processors,2013,performance counters and temperature model for power prediction,,,,no perf.,,,,,,
+Wattch: A framework for architectural-level power analysis and optimizations.,2000,architecture level tool for power analysis,,,,no perf.,,,,,,
+Calculating Source Line Level Energy Information for Android Applications,2013,"Profiling and energy measurement correlation to design a low overhead, accurate source line energy approach",,,,no perf.,,,,,,
+Lightweight Energy Consumption Analysis and Prediction for Android Applications,2016,combination of execution sequences and BB Energy consumption to get method-level energy consumption,,,,no perf.,,,,,,
+Energy refactorings for android in the large and in the wild,2020,Test Energy saving possibilities of combinations of energy refactoring strategies,,,,no perf.,,,,,,
+DelayDroid: Reducing Tail-Time Energy by Refactoring Android Apps,2015,,,,,no perf.,,,,,,
+Switching Push and Pull: An Energy Efficient Notification Approach,2014,switching between push and poll notifications as required,,,,no perf.,,,,,,
+Energy Efficient Scheduling for Mobile Push Notifications,2015,learn scheduling rate of push notifications to reduce energy consumption,,,,no perf.,,,,,,
+On Reducing the Energy Consumption of Software Product Lines,2021,Reducing energy consumption by fw and pw measurements and modeling,,,,no perf.,,,,,,
+How does Docker affect energy consumption? Evaluating workloads in and out of Docker containers,2017,WEnergy consumption analysis of Docker vs Linux,"BB Energy
+BB Time","4 sws
+WLs","WhattsUp? Pro
+Time",strong linear correlation between Energy and time,pos. corr.,,,,,
+Energy Consumption Anatomy of Live Video Streaming from a Smartphone,2014,power analysis of capturing videos,,,,no perf.,,,,,,
+Green architectural tactics for the cloud,2014,"definition, examples and discussion of green architectural tactics",,,,no own measurements,,,,,,
+Mining energy-aware commits,2015,qualitative study of energy-aware commits,,,,no own measurements,,,,,,
+Energy-efficient mobile robot exploration,2006,graph based route optimization strategies to reduce energy consumption,,,,no perf.,,,,,,
+An energy saving robot mobility diversity algorithm for wireless communications,2013,wrieless communication optimization of a roboter,,,,no perf.,,,,,,
+Energy-aware resource allocation heuristics for efficient management of data centers for Cloud computing,2012,definition and test of resource allocation heuristics,,,,no perf.,,,,,,
+Methodological guidelines for measuring energy consumption of software applications,2019,define em guidelines showcase them with an example,,,,no perf.,,,,,,
+Energy Efficiency in Cloud Software Architectures,2013,"a systematic literature review 
+what software architectures for cloud service provisioning allow to achieve energy-efficient solutions",,,,no own measurements,,,,,,
+Energy Efficient Use of Multirobot Production Lines in the Automotive Industry: Detailed System Modeling and Optimization,2013,energy savings on robotic assembly lines for the automotive industry,,,,no sws,,,,,,
+GreenHub Farmer: Real-World Data for Android Energy Mining,2019,data-collection app for building a large open source energy data database,,,,no correlation analysis,,,,,,
+Detecting and Diagnosing Energy Issues for Mobile Applications,2019,study of energy issue reports,,,,no own measurements,,,,,,
+Do Energy-Oriented Changes Hinder Maintainability?,2019,detecting problems in meintainability of energy optimized source code,,,,no own measurements,,,,,,
+Characterizing Energy-Aware Software Projects: Are They Different?,2016,,,,,"no perf. 
+no energy.",,,,,,
+How is energy consumed in smartphone display applications?,2013,"investgate energy consumption of multimedia applications using smartphone displays
+compare different screens and applications",,,,no perf.,,,,,,
+Energy Saving Opportunity Analysis of Automotive Serial Production Systems (March 2012),2012,"energy saving opportunities in production plants
+investigation of energy saving and throughput tradeoff",,,,"investigation of machines, not sws",,,,,,
+How Android App Developers Manage Power Consumption? - An Empirical Study by Mining Power Management Commits,2016,empirical study of energy saving commits in Android,,,,no own measurements,,,,,,
+A Computing Profiling Procedure for Mobile Developers to Estimate Energy Cost,2015,,,,,no perf.,,,,,,
+Mining Energy Traces to Aid in Software Development: An Empirical Case Study,2014,"correlate active modules with power measuremnts
+repeate experimnets with different modules per test
+learn energy influence of modules",,,,no perf.,,,,,,
+"Modeling, Profiling, and Debugging the Energy Consumption of Mobile Devices",2015,survey about energy measurement techniques,,,,no own measurements,,,,,,
+Characterizing Energy Consumption of Third-Party API Libraries using API Utilization Profiles,2020,API calls to energy consumption,,,,no perf.,,,,,,
+The Power of System Call Traces: Predicting the Software Energy Consumption Impact of Changes,2014,relation of System calls to energy consumption,,,,no perf.,,,,,,
+Examining the Energy Impact of Sorting Algorithms on Android: An Empirical Study,2019,Time and energy measurements comparison of different sorting algorithms with different WL,,,Monsoon,More examples needed to conclude for a positive correlation.,,,,"""Our results show that optimizing run time does not necessarily also improve energy consumption""",,
+Power Estimation for Mobile Applications with Profile-Driven Battery Traces,2013,"Assign to applications Events (close, open, ...) an energy value based on the bettery discharge rate of 80.000 battery user traces",,,,no perf.,,,,,,
+Comprehending Energy Behaviors of Java I/O APIs,2019,measuring energy consumption of Java I/O operations,,,,no perf.,,,,,,
+Catalog of Energy Patterns for Mobile Applications,2019,Energy efficiency design pattern detection on many Android and IOS apps,,,,no perf.,,,,,,
+"Energy Efficiency across Programming Languages
+How Do Energy, Time, and Memory Relate?",2017,investigating the energy consumption of versions of programming languages,,P,"RAPL
+BB Time",""" can see that the top 5 most energy efficient languages keep their rank""
+"" a faster language is not always the most energy efficient""","pos. corr.
+no. corr.",,,"""A faster language is not always the most energy efficient.""",,
+Fine-Grained Power Modeling for Smartphones Using System Call Tracing,2011,system-call-based power modeling approach which gracefully encompasses both utilization-based and non-utilization-based power behavior,,,,no perf.,,,,,,
+Green Mining: A Methodology of Relating Software Change to Power Consumption,2012,"we relate power consumption to software changes, and then investigate the impact of static OO software metrics on power consumption",,,,no perf.,,,,,,
+"A survey of mobile cloud computing: architecture, applications, and approaches",2013,"Survey about Computational Offloading
+- Section Advantages of mobile cloud computing",,,,This avoids taking a long application execution time on mobile devices which results in large amount of power consumption.,Pos. Corr,only energy consumption of a mobile device is investigated,,,,
+Energy consumption in mobile phones: a measurement study and implications for network applications,2009,"measuring reduction of energy consumption of different wireless standards 
+reduction by delaying connections and reducing ranp and tails","Energy
+Time","mobile networking technologies
+4 phones",Nokia Energy Profiler,The tool  improves (delays in user boundaries) user-specified response times while consuming less energy,Neg. Corr,,,,,
+Transforming uml state machines into stochastic petri nets for energy consumption estimation of embedded systems,2012,An operational model (HW specific model) and an Application model (UML) of a microcontroller is used to predict energy.,Energy of HW pieces,-,taken from data sheets,"No Improvement measured
+no runtime
+no correlation analysis",-,,,,,
+Invasive technique for measuring the energy consumption of mobile devices applications in mobile cloud environments,2017,,Energy in mA,"Cloud types: private/public
+Connection type: 3g 4g wifi
+WL",ACS712 20A current sensor,"no runtime
+no correlation analysis",-,"if ship work to server, also include shipping costs and costs at device for initialization",,,,
+Energy-efficient soft real-time CPU scheduling for mobile multimedia systems,2003,optimization of dynamic cpu frequency scaling and cpu task sceduling,"energy
+cpu cycles",programs,,"idle time costs energy, efficient scaling leads to energy reduction",-,,,,,
+Accurate online power estimation and automatic battery behavior based power model generation for smartphones,2010,"Power Modeling approach of smartphones
+based on Internal Phone sensors",,"WL
+HW",,"accurate modeling power consumption
+no performance measurements
+no correlation analysis",-,,,,,
+Energy-efficient scheduling policy for collaborative execution in mobile cloud computing,2013,"Testing an offloading approach with energy budget and communication cost for optimal solutions as a graph problem
+Solve graph with shortest path approaches",,,,"no combined energy cost
+no execution time analysis",-,,,,,
+Who killed my battery? Analyzing mobile browser energy consumption,2012,monitoring energy consumption while leading webpages,,"different websites (WL)
+image pixel number
+offloading vs no offloading",energy: Agilent 34410A,,-,,,,,
+Assessing the impact of service workers on the energy efficiency of progressive web apps,2017,monitoring energy consumption of Service workers in different setups,,"two phones
+7 WPAs
+3G WiFi",,Service workers have no relevant influence,-,,,,,
+Performance-based guidelines for energy efficient mobile applications,2017,"Analyzing whether 8 best practices for reducing performance are also redce energy consumption
+Android SDK lint tool to detect performance issues
+Apply performance best practices and test energy improvement",energy,different Apps,,there are performance optimizations that also have an impact on energy consumption (RQ2),"pos. corr.
+neg. corr.
+no.corr.",,,,,
+On the impact of code smells on the energy consumption of mobile applications,2019,analyse of the impact of code smells on energy consumption,,"many apps
+different android code smells",,"no runtime
+no correlation analysis",-,,,,,
+Petra: a software-based tool for estimating the energy profile of android applications,2017,presentation of a new API-based energy consumption modeling approachen,"energy validation with monsoon
+API calls with Android debugging",54 APPs,,"no runtime
+no correlation analysis",-,,,,,
+Saving Energy on Mobile Devices by Refactoring,2014,"Defining,detecting and refactoring code smells
+Measuring improvement on energy side",,,,"refactoring energy code smells reduce energy consumption
+no runtime
+no correlation analysis",-,,,,,
+Using bad smell-driven code refactorings in mobile applications to reduce battery usage,2015,Tradeoff analysis between OO design and energy consumption,energy,"WL: micro benchmarks
+APPs",Power Monitor,no performance vs energy correlation,-,,,,,
+The INFN COSA Project: Low-Power Computing and Storage,2018,,,,,,,,,,,
+Quantifying energy use in dense shared memory HPC node,2016,HPC cpu memory energy model,,HW,PIB Power interface board,"memory access logging is needed, besides cpu Last, to create accurate energy models
+no correlation if some communication come into play
+memory access matters
+positive correlation -> benchmark dependent
+memory access may energy hungry 
+floating point instructions more energy hungry","Pos. Corr
+No Corr",,,,,
+"Mainstream vs. Emerging HPC: Metrics, Trade-Offs and Lessons Learned",2018,Analyzing Hardware specifications for performance and energy consumption,,"HW
+WL",,no corr. between perf and energy,-,,,,,
+"Performance evaluation and energy efficiency of high-density HPC platforms based on Intel, AMD and ARM processors",2013,evaluate performance-energy tradeoff of different HPC Processors,,"Processor types
+WL - BM",,no correlation analysis,-,,,,,
+SoC-based computing infrastructures for scientific applications and commercial services: Performance and economic evaluations,2019,"performance energy tradeoffs of servers
+BM is the N-Body problem",performance in GFLOPS,HW,energy: Voltech PM300 Power Analyzer,"trade-off analysis 
+but no correlation analysis",-,,,,,
+An empirical study of practitioners' perspectives on green software engineering,2016,"Perspectivs of practitioners on green IT
+Empirical Study
+Questionairs and Interviews",,,,"no runtime
+no correlation analysis",-,,,,,
+What do programmers know about software energy consumption?,2015,Question 100 programmers about their knowledge about softwares energy consumption.,,,,"no runtime
+no correlation analysis",-,,,,,
+Making web applications more energy efficient for OLED smartphones,2014,automatically OLED screen energy optimizations,,,,"no runtime
+no correlation analysis",-,,,,,
+Energy profiles of java collections classes,2016,"comparison of Java collection classes
+energy efficiency",,WL,,"no runtime
+no correlation analysis",-,,,,,
+The influence of the Java collection framework on overall energy consumption,2016,"Analyze Java Collections energery consumption with different WLs
+Automatically propose collections that are more energy efficient",,WL,,"Some Collections result in neg. corr. some in pos. corr.
+As such, we cannot draw any conclusion of the correlation between execution time and energy being consumed","neg. corr.
+pos. corr.",,,,,
+Automated energy optimization of http requests for mobile applications,2016,HTTP request bundeling of APPs,,"Different APPs
+Different Conn. Types",,"bundeling saves energy
+there ist some additional time for bundeling HTTP requests
+much time is saved by bundeling (network communication is time consuming)",pos. corr.,,,,,
+Client-side energy efficiency of HTTP/2 for web and mobile app developers,2016,"Comparing HTTP/1.1 with HTTP/2
+varying different properties
+TSL impact",Power,"WL
+synthetic BMs, real-world BMs
+",INAs,No correlation analysis,-,,,,,
+Understanding and detecting wake lock misuses for android applications,2016,"Lage-scale evaluation of wake lock missuses in many apps
+generation of wake-lock bug detection approaches",,,,no perf.,-,,,,,
+Energy optimization in Android applications through wakelock placement,2014,save energy through wakelock placement,energy,different apps,,efficient wakelock placement leads to energy consumption reduction,-,,,,,
+Wlcleaner: Reducing energy waste caused by wakelock bugs at runtime,2014,Impact of Wake-Lock bug refactoring on energy consumption,,"APPs
+HW",,"energy reduced
+no performance measured
+no correlation analysis",-,,,,,
+Reducing power consumption of smart device by proper management of wakelocks,2015,reducing power consumption by detecting buggy wake locks,,,,no perf.,-,,,,,
+Fine-grained energy consumption model of servers based on task characteristics in cloud data center,2017,method level energy consumption vs performance,,WL,,Linear corr. of p and e of methods is nearly 0,No corr.,,,,,
+"Software-based energy profiling of android apps: Simple, efficient and reliable?",2017,"presentation of Petra a new software-based tool for energy modeling
+",,54 APPs,Monsoon ,No Correlation analysis,-,,,,,
+An analysis of power consumption in a smartphone,2010,"Component level energy measurements of a smartphone
+creation of an energy model
+Model based on different WLs","Power
+Execution Time","3 different phones
+WL: micro benchmarks vs realistic scenarios",National Instruments PCI-6229 DAQ,No Correlation analysis,-,,SPEC CPU2000,,,
+Into the wild: studying real user activity patterns to guide power optimizations for mobile architectures,2009,"Slowly reduction of Screen brightness and CPU speed leads to energy savings
+Energy consumption modeled by 'in the wild' logging data",,pattern,,"High user satisfaction by simultanuously strong energy reducton
+software configurations are the key",No correlation,,,,,
+Using complete machine simulation for software power estimation: The softwatt approach,2002,analyses energy consumption of parts of an simulated system ,,,,"increasing idle times reduces energy consuumption
+no execution time measured",-,,,,,
+Powerscope: A tool for profiling the energy usage of mobile applications,1999,an early tool for power measurements,,,,no performance,-,,,,,
+Self-constructive high-rate system energy modeling for battery-powered mobile systems,2011,learn system energy models based on execution of programs,energy,HW,,no performance,-,,,,,
+Initial explorations on design pattern energy usage,2012,Analysis of design patterns impact on energy consumption,,SW-systems,,"no performance measurements
+no correlation analysis",-,,,,,
+An exploratory study on assessing the energy impact of logging on android applications,2018,Impact of logging on energy consumption,,"Apps, Versions
+WL of controlled experiment",,no performance measurements,-,,,,,
+Remove rats from your code: automated optimization of resource inefficient database writes for mobile applications,2018,"optimize energy consumption of local App databases
+automatically detect and rewrite inefficient db-writes (in loops)
+Adapt Workload to trigger RAT",,"WL
+Different APPs",,energy and execution time can be saved,pos. corr,,,,,
+Greenminer: A hardware based mining software repositories software energy consumption framework,2014,"measuring energy consumption of smartphones automatically
+analyze, visualize, report results",,,INAs,no performance measured,-,,,,,
+Green mining: energy consumption of advertisement blocking methods,2014,study analzzing ad-blockers energy consumption,power vs time,diff. add blocker,,no correlation analysis ,-,,,,,
+GreenAdvisor: A tool for analyzing the impact of software evolution on energy consumption,2015,predicting energy regression,energy,"commits
+different software projects",,"energy changepoints can be found
+no perf measured",-,,,,,
+Deep green: Modelling time-series of software energy consumption,2017,Model time series energy consumption with different ML approaches,,"WL
+ML approaches
+SW-systems",,No perf. energy corr.,-,,,,,
+Greenoracle: Estimating software energy consumption with energy measurement corpora,2016,"Learning a model from many previous energy measurements.
+System traces and CPU utilization as input for the model
+10% Error of the energy value
+correlation analysis of system calls and resulting energy consumption",Energy: System calls and CPU utilization ,"diff Apps
+diff Versions",,no perf measurements,-,,,,,
+What can android mobile app developers do about the energy consumption of machine learning?,2019,Test differnt ML approaches of many APPs for energy efficiency,,"WL: Different ML datasets
+APPs",GreenMiner,"total time and cpu time corr.
+IO time no corr.","pos. corr.
+no. corr.",,,,,
+SEEDS: a software engineer's energy-optimization decision support framework,2014,"Tests different Java Collections for energy efficiency and improvement
+implements an testing Framework for automation",,"Software
+Collections",,no perf.,-,,,,,
+How does code obfuscation impact energy usage?,2016,impact of code obfuscations on energy consumption,,"18 code opfuscations
+WL: 21 Scenarios
+SW: 11 APPs
+HW: 4 Platforms",,"neg. impact on energy consumption, but they are not a big influence
+no performance measurements
+no correlation analysis",-,,,,,
+How do code refactorings affect energy usage?,2014,The effect of code refactoring on energy and performance,Execution count + Time + Energy,"197 Programs
+6 refactorings","LEAP (p+e)
+Statement Coverage Monitor",Time and energy do not correlate for all applications.,"pos. corr.
+no. corr.",,,,,
+"Program energy efficiency: The impact of language, compiler and implementation choices",2014,measuring energy efficiency of software ,energy,"compiler optimization
+language
+implementation decisions
+WL",,"using optimization flags not only improves performance but also reduces energy consumption
+programming language decision hints to positive corr.
+examples for positive and negative corr. depending on hte workload",-,,,,,
+Dynamic memoization for energy efficiency in financial applications,2011,measure energy and performance savings when applying memorization,energy,"with and without memorization
+different programs",,memorization leads to ernergy and performance savings,pos. corr.,,,,,
+Green: a framework for supporting energy-conscious programming using controlled approximation,2010,"measurement and modeling approach for energy and performance controlling/reduction
+",,WL,,Improving performance reduces energy consumption,pos. corr.,,,,,
+Green software requirements and measurement: random decision forests-based software energy consumption profiling,2017,"based on component measurements a ML model is trained to predict energy consumption
+Components are Computation (CPU Usage in % + Frequency), Storage (Read, Writ bytes), Communication (send recv bytes)","energy
+Computation (CPU Usage in % + Frequency), Storage (Read, Writ bytes), Communication (send recv bytes)","WL
+Desktop and Mobile Devices",,"no correlation analysis
+different input metrics are used to pred. energy",-,,,,,
+On the energy consumption of design patterns,2013,,,,,,,,,,,
+Thread shuffling: Combining DVFS and thread migration to reduce energy consumptions for multi-core systems,2011,Thread shuffeling concentrates difficult threads on one core and scales down the other cores,"energy
+performance",Different Benchmarks,,energy savings are possible without influence performance,No Correlation,,,,,
+"Android app energy efficiency: The impact of language, runtime, compiler, and implementation",2016,build energy model by reading Android Debugging API,"Power (modeled)
+Runtime (+cpu / mem Utilization)","Programming languages
+Compiler optimizations
+Android system
+implementation choices
+WL","ADB (Android Debugger)’s logging APIs
+internal voltage sensors",Improving Performance reduces Energy Consumption,pos. corr.,,"Self implemented Shellsort algorithm
+QuickSort, Fibonacci, Hanoi, and Pi calculation",,,
+Energy evaluation of software implementations of block ciphers under memory constraints,2007,"performance, energy, code length dependencies of block ciphers",,5 different block ciphers,,"""As expected, the average power consumption
+is pretty uniform amongst the different block ciphers, which
+confirms the observations made by Sinha et al. [15]""",pos. corr.,,,,,
+Proactive Energy-Aware Programming with {PEEK},2014,"framework for measuring energy consumption
+provide hints for in-code energy savings","energy
+execution time",power mode (low/normal),,,No Correlation,,,,,
+An experimental survey of energy management across the stack,2014,massive measurements of sws,,"WL-BM
+Configurations",,"number threads: pos. Corr.
+gcc optimization flags: pos. Corr.
+",pos. corr.,,,,,
+A source-level energy optimization framework for mobile applications,2016,"source-level energy optimizations
+Step 1: Energy modeling
+Step 2: Code Optimizations",,,,"""The correlation between execution time and energy consumption is beyond the topic of this paper.""",-,,,,,
+Mining energy-greedy api usage patterns in android apps: an empirical study,2014,"Profingin methods of APPs to analyze energy hungry API usage pattern
+Provide Developer Guidelines",,APPs,,"no performance opt. measured
+no corr. analysis",-,,,,,
+"GreenC5: An adaptive, energy-aware collection for green software development",2017,Diss analyzing performance-power trade-off,,"SW
+HW
+WL",,"Power and performance are on a pareto front
+Only selection of Power, or performance-efficient clusters possible",Neg. Corr.,,,,,
+"Definition, implementation and validation of energy code smells: an exploratory study on an embedded system",2013,Analyzing energy code smells in embedded systems,,Refactoring Pattern,,"Fixing energy smells reduces energy consumtion (only small improvement)
+Fixing energy smells does not influence execution time significantly (in almost all cases)",No Correlation,,,,,
+Alea: Fine-grain energy profiling with basic block sampling,2015,Probabilistic approahce for generating fine-grained Energy measurements with low error,,"SW: (parallel, sequential)
+HW: Intel, Arm",,strong corr. between power consumption and cache accesses of basic blocks,pos. corr.,,,,,
+Investigation for Software Power Consumption of Code Refactoring Techniques,2014,analysis if code refactoring techniques reduce energy consumption,,"code refactoring techniques
+software systems",,no perf.,-,,,,,
+Where is the energy spent inside my app? Fine Grained Energy Accounting on Smartphones with Eprof,2012,"energy consumption pinpointing in android apps
+pinpointing bugs",,"android vs windows phone
+APPs",,no WL or Config or other variability included in measurement,-,,,,,
+Investigating Energy and Security Trade-offs in the Classroom with the Atom LEAP Testbed,2011,User study testing different applications for their energy consumption and the saving possibilities of some options,,"2 SW configuration options
+Some students
+Some applications","National Instruments (NI) Digital Acquisition Device (DAQ)
+10k Hz",no perf.,-,,,,,
+Understanding energy behaviors of thread management constructs,2014,empirical study analyzing performance-energy tradeoff of 3 options from multi-core platforms,,"2 SW Options number of threads, task division strategy
+WL
+9 Java systems (sunflow, h2, dacapo, ...)",,it depends on the ammount of parallel executable code if energy and performance correlates for different number of threads,"pos. neg. +
+no corr",,,"Only limited number of Features (2) 
+",,
+Empirical evaluation of two best practices for energy-efficient software development,2016,empirical evaluation of query optimization and sleep instructions for their energy consumption,,,,no perf.,-,,,,,
+Energy consumption analysis of algorithms implementations,2015,analyzing energy efficiency of different sorting algorithms,,"programming Languages
+algorithms",,,No Correlation,,,,,
+Energy-efficient work-stealing language runtimes,2014,"implementation of Hermes, a work stealing approach
+DVFS Dynamic Voltage Fraquency Scaling",,"WL
+BM",,average of 11-12% energy savings with an average of 3-4% performance loss,neg. corr.,,,,,
+GBench: benchmarking methodology for evaluating the energy efficiency of supercomputers,2013,Presentation and evaluation of a WL varying Green HPC Benchmark,,SW Configurations,,"investigated WLvsPower
+power consumption depends on memory accesses in HPC",pos. corr.,,,,,
+Analysis and evaluation of the android best practices impact on the efficiency of mobile applications,2013,Evaluation of for loop and getter and setter use in Android apps on energy consumption and performance,,HW,,performance improvement improves also energy consumption,pos. corr.,,,,,
+AxBench: A multiplatform benchmark suite for approximate computing,2016,Presentation of a benchmark suite for approximate computing with WL variability,,"WL
+HW",,reducing energy consumption also reduces performance,pos. corr.,,,,,
+"Energy-efficient management of data center resources for cloud computing: a vision, architectural elements, and open challenges",2010,"Provides a vision on energy consumption of cloud environments
+Tests Power models and energy saving potential by WL scaling tests",energy is modeled,WL (CPU utilization),,"No perf measured
+Energy consumption is simulated",-,,,,,
+Data center energy consumption modeling: A survey,2015,Survey of energy models for data centers,,,,No new measurements,-,,,,,
+"Green cloud computing: Balancing energy in processing, storage, and transport",2010,analyzing cloud energy consumption including transport and memory of servers compared to PCs,"energy consumption of storage, network, services","cloud vs PC
+private vs public",,"energy consumption of low intensity, infrequent tasks is lower on PCs",-,,,,,
+A simplified power consumption model of information technology (IT) equipment in data centers for energy system real-time dynamic simulation,2018,modeling power consumption of a server,,,,"no performance measurements
+no correlation analysis",-,,,,,
+A taxonomy and survey of energy-efficient data centers and cloud computing systems,2011,"Analyses the state of the art of energy efficiencies in server envoronments
+Provides a Taxonomy categorizing approaches into different Areas: HW, SW, OS, Static, Dynamic (Power Management)",,,,No new measurements,-,,,,,
+Unified performance and power modeling of scientific workloads,2013,Performance-power model evaluation,,"WL
+HW",,no correlation investigated,-,,,,,
+Evaluating and modeling power consumption of multi-core processors,2012,presentation of a power medelling approach for multi-cor processors,power,,,model is accurate,-,,,,,
+Maximizing throughput of overprovisioned hpc data centers under a strict power budget,2014,proposing an approach for energy aware online resource sceduling based on performance metrics,,WL,,"power performance tradeoff
+maximizing performance while fixing energy consumption",neg. corr.,,,,,
+Exploring DRAM organizations for energy-efficient and resilient exascale memories,2013,Error - Energy trageoff in RAM,,,,"no performance measurements
+no correlation analysis",-,,,,,
+Server power modeling for run-time energy optimization of cloud computing facilities,2014,"a power model for servers (cloud)
+including more measured variables (temperature, IPC, mem, utilization)",,,performance using perf tool (as input for the energy model),more accurate energy models ,-,,,,,
+Using low-power modes for energy conservation in Ethernet LANs,2007,"Analyzing the potential of different low power modes
+low power modes are different transfer rates, turn off interface or internal link",,,,"has the potential to save energy
+no performance measurements
+no corr. analysis",-,,,,,
+"Managing energy consumption costs in desktop PCs and LAN switches with proxying, split TCP connections, and scaling of link speed",2005,Analyzes energy consumption saving potential of LAN and desktop PCs in IDLE time,,,,"hugh potential
+no runtime
+no correlation analysis
+no ratio between performance and energy",-,,,,,
+Energy consumption estimation of virtual machines,2013,new approach for measuring energy consumption of virtual machines ,,"number VMs
+WL
+CPU load",,no correlation investigated,-,,,,,
+Workload-aware resource management for energy efficient heterogeneous docker containers,2016,energy consumption of contailner WLs,"Energy
+performance","WL
+SWS FFMPEG, STREAM
+number of containers",,"number of contaioners: 
+NO corr. for CPU intensive sws 
+Neg. corr for mem intensive sws","No. corr
+Neg. corr",,,,,
+Safari: Function-level power analysis using automatic instrumentation,2012,"Power model creation based on CPU utilization, frequency, ICP, context switches, memory accesses","Energy
+CPU metrics",,energy: NiDAQ 9205,"dynamic volatage and frequency scaling may affict energy consumption
+if ICP (instructions per cycle) is higher reducing cpu frequency leads to neg. corr. -> more time, but less energy -> tradeoff","Not directly investigated
+Hints for No Corr. and
+Hints for Neg. Corr",,,,,
+Exploring energy and performance behaviors of data-intensive scientific workflows on systems with deep memory hierarchies,2013,Energy-performance dependency in NVRAM (large Memory),,WL (BM),,it corr. over BM,pos. corr.,,,,,
+A fine-grained approach for power consumption analysis and prediction,2014,linear energy model based on program instructions,,,,"no performance measurements
+no correlation analysis",-,,,,,
+Taming power peaks in mapreduce clusters,2011,modeling power peaks in MapReduce Cluster,,,,no measurements,-,,,,,
+Fine-grained energy consumption model of servers based on task characteristics in cloud data center,2017,"Presentation of an all-comprising energy modeling approach for data centers
+Correlation Matrix + PCA + Regression",,WL,,"model is accurate
+multiple HW Features combined correlate with energy consumption
+Fractions are WL dependent",pos. corr.,,,,,
+iMeter: An integrated VM power model based on performance profiling,2014,Implementation of an accurate power model that is based on performance metrics,,WL,,"able to produce accurate predictions
+PCA -> Reduction of 91 performance counters to the influential ones
+Combination of performance metrics correlates with energy consumption",pos. Corr.,,,,,
+"Predictive modeling for cpu, gpu, and fpga performance and power consumption: A survey",2018,survey of predictive modeling techniques for CPU GPU and FPGAs performance and energy consumption,,,,"no energy measure.
+no runtime
+no correlation analysis",-,,,,,
+A waterfall model to achieve energy efficient tasks mapping for large scale GPU clusters,2011,"reduce energy consumption by balance load, shutdon nodes, scale voltage and frequency of GPU Clusters
+",,HW,,"energy saving potentian, by computing same WL",pos. Corr.,,,,,
+A locality-aware memory hierarchy for energy-efficient GPU architectures,2013,"Introduction of an specialized memory concept for GPUs
+performance analysis
+energy analysis",,WL,, no correlation analysis,-,,,,,
+Run-time power-gating in caches of GPUs for leakage energy savings,2012,Technique for improving putting chache to sleep mode and wake it up again ,,WL,,"energy consumption reduction
+no correlation analysis",-,,,,,
+CachinMobile: An energy-efficient users caching scheme for fog computing,2016,"Simulation of Fog computing with the ChainMobile technique (chaining energy efficient mobil devices for communication)
+Social Mobile device network is used for data transmission",,"Social influence value
+Different caching scheme",,"energy reduction possible
+no latency / performance analysis",-,,,,,
+Optimal workload allocation in fog-cloud computing toward balanced delay and power consumption,2016,Energy savings with assigning WL to Network devices (Fog or Edge computing),"Power consumption
+Delay","HW 
+WL",,"depending on workload, the energy consumption increases and the system delay increases",pos. corr.,,,,,
+Greening of the Internet,2003,Testing the potential of sleeping strategies of routers and switches to reduce energy consumption of the internet,,,,no correlation analysis,-,,,,,
+Optimising Energy Consumption of Design Patterns,2013,Experiment of energy onsumption od design patterns Observer and Decorater,,,,"no runtime
+no correlation analysis",-,,,,,
+A comprehensive study on the energy efficiency of java's thread-safe collections,2016,testing different collection implementations for their energy efficiency,,,,"no performance measurements
+no correlation analysis",-,,,,,
+Assisting non-specialist developers to build energy-efficient software,2017,Java collections energy tests plus static code analysis to give recommendations,,,,"no runtime
+no correlation analysis",-,,,,,
+jstanley: Placing a green thumb on java collections,2018,"reduce energy and improve performance by testing different java collections automatically
+Eclipse plugin with suggestions",,P,,improving performance also improves energy consumption,pos. corr.,,,,,
+Energy-aware mechanism for stencil-based MPDATA algorithm with constraints,2017,tuning DVFS scaling for reducing energy consumption,,WL,,reduce energy consumption with fixed performance (range of valid performance values),No corr.,,,,,
+Performance and energy metrics for multi-threaded applications on DVFS processors,2018,system energy consumption,,"number of threads
+cpu frequency
+wl",,paalications with lower execution time haven less energy consumption,pos. corr.,,"PARSEC bm suite
+SPLASH-2 bm suite",,,
+Energy-aware software engineering,2017,,,,,,,,,,,
+An empirical study of power characterization approaches for servers,2019,"empirical study of the advantages, reliability and corectness of server power models",,,,no measurements,-,,,,,
+Performance vs. Power and Energy Consumption: Impact of Coding Style and Compiler,2017,"Empirical analysis about the compiler and coding style impact on energy, power and performance",,D,,in most cases performance correlates with energy,pos. corr.,,,,,
+Energy Efficient High Performance Processors: Recent Approaches for Designing Green High Performance Computing,2018,,,,,,,,,,,
+Software and DVFS tuning for performance and energy-efficiency on Intel KNL processors,2018,performance and energy tuning of processors,,"Memory Type
+core frequency",,tune perf without impacting energy,No corr.,,,,,
+Benefits in relaxing the power capping constraint,2017,testing on-the-fly power capping adjustments,,,,no performance measurements,-,,,,,
+Investigating power capping toward energy-efficient scientific applications,2019,"tool for setting power caps
+analysis of setting power caps performance- and energy-wise",,different math libs [program],,,"pos. corr.
+No corr.",,,,,
+Energy-aware high performance computing,2017,,,,,,,,,,,
+Examining energy efficiency of vectorization techniques using a Gaussian elimination,2018,energy saving potential of vectorization techniqus,,vectorization techniques,,no correlation analysis,-,,,,,
+Case studies of multi-core energy efficiency in task based programs,2012,,,,,,,,,,,
+Machine learning method for energy reduction by utilizing dynamic mixed precision on GPU-based supercomputers,2019,testing a new decision tree impementation for energy efficiency with same precision,,"decTrees
+2 GPU Clusters",,no performance measurements,-,,,,,
+Model-based estimation of the communication cost of hybrid data-parallel applications on heterogeneous clusters,2017,"HPC load balancing technique
+balancing across uneven HW 
+balancing communication",,"SW
+HW
+WL",,no correlation of perf and energy,-,,,,,
+Energy efficiency: a new concern for application software developers,2017,showing the importance for energy efficiency analysis of software for developers,,,,no measurements,-,,,,,
+Development frameworks for mobile devices: a comparative study about energy consumption,2018,testing energy consumption of different android development frameworks,,"different apps
+different tasks",,no correlation analysis,-,,,,,
+A system-call based model of software energy consumption without hardware instrumentation,2015,"creating a power model based on system calls
+compare against real measurements",,app version,,no correlation analysis,-,,,,,
+Green mining: investigating power consumption across versions,2012,energy evaluation of firefox versisons,,versions of firefox,,"no runtime tested
+disk, memory, and the CPU are all related and relevant to the power use of a software system",-,,,,,
+An empirical study of the energy consumption of android applications,2014,"source line level energy consumption study
+how is energy consumed in APPs",,405 APPs,,no runtime correlation (they compared API ranking),-,,,,,
+Optimizing energy of http requests in android applications,2015,http request bundeling enrgy consumption saving evaluation ,,2 APPs,,no performance measurements,-,,,,,
+Going green: An exploratory analysis of energy-related questions,2015,literature analysis of forums and questions,,,,no performance measurements,-,,,,,
+Energy efficiency of mobile clients in cloud computing,2010,energy efficiency in mobile plus cloud computing,,HW,,higher performance better energy efficiency,pos. corr.,,,,,
+Power conservation strategy for mobile computers using load sharing,1998,potential of computational offloading on power conservation,,,,no measurements,-,,,,,
+Bootstrapping energy debugging on smartphones: a first look at energy bugs in mobile devices,2011,taxonomy of energy bugs based on online forum questions,,,,no measurements,-,,,,,
+A green miner's dataset: mining the impact of software change on energy consumption,2013,creation of energy measurement data corpus,,,,no data evaluation,-,,,,,
+An Investigation into the Energy Consumption of HTTP POST Request Methods for Android App Development,2018,"Evaluation of different HTTP request approaches
+with WL variation",,WL,,approaches are differently efficient,-,,,,,
+Evaluating the Impact of Code Smell Refactoring on the Energy Consumption of Android Applications,2019,code smell refactoring of android apps,,"code smell
+WL",,Significant reduction in energy consumption of Android apps does not necessarily correlate with a significant reduction or increase of execution time.,No corr.,,,,,
+Profiling power consumption on mobile devices,2013,evaluation of power consumption of different usage scenarios of smartphones,,"Usage Profiles
+WL",,no performance measurements,-,,,,,
+Detecting energy bugs and hotspots in mobile apps,2014,automatic test case generation for energy bug detection,,WL,,no performance measurements,-,,,,,
+Automated re-factoring of android apps to enhance energy-efficiency,2016,detect and solve refactoring opptotunities of android bugs,,APPs,,no performance measurements,-,,,,,
+Aneprof: Energy profiling for android java virtual machine and applications,2011,"method-level energy profiling tool
+copes with time syncronization of energy measurements",,,,no correlation analysis,-,,,,,
+A study on the energy consumption of android app development approaches,2017,investigating energy and performance trade-off of apps,,"5 Devices
+33 BM
+3 Apps",,"depending on the app energy and performance correlate
+or it does not","pos. corr.
+No corr.",,,,,
+Optimizing energy consumption of GUIs in Android apps: a multi-objective approach,2015,multi objective optimization approach for gui color palette,,Phones,,no performance objective,-,,,,,
+LOCUS: Low-power customizable many-core architecture for wearables,2017,improving performance per watt trade-off of wearable devices,,,,no correlation analsysis,-,,,,,
+Computation offloading and resource allocation for low-power IoT edge devices,2016,managing computation offloading in IoT networks,,,,no performance measurements,-,,,,,
+Fog computing in body sensor networks: An energy efficient approach,2015,,,,,,,,,,,
+Energypatch: Repairing resource leaks to improve energy-efficiency of android apps,2017,detect and solve refactoring opptotunities of android bugs,,APPs,,no performance measurements,-,,,,,
+Advancing energy testing of mobile applications,2017,plan for creating energy testing framework,,,,no measurements,-,,,,,
+uDroid: an energy-aware mutation testing framework for Android,2017,,,,,,,,,,,
+Energy-aware test-suite minimization for android apps,2016,"reducing number of tests needed to learn accurate energy models
+coverage-based",,,,"no runtime
+no correlation analysis",-,,,,,
+Energy consumption and efficiency in mobile applications: A user feedback study,2013,"literature study, analyzing users attitude to energy consumption",,,,no measurements,-,,,,,
+Green streams for data-intensive software,2013,"optimizing energy consumption of data-intensive software
+using stream paradigm",,,,"no correlation analysis
+thea are related",-,,,,,
+Reducing energy consumption using genetic improvement,2015,improving energy consumption of sat solvers using genetic improvement,,WL,,"CPU-bound processes, such as MiniSAT, optimising execution time exclusively has the side effect of producing more energy-efficient solutions",pos. corr.,,,,,
+Proactive and adaptive energy-aware programming with mixed typechecking,2017,"energy-aware programming to mix static and dynamic typing
+able to change types depending on external inluences (energy, temperature) during runtime",,,,"flexibility helps reducing Energy consumption
+no perf.",-,,Many (Ent Benchmark),,,
+Stochastic energy optimization for mobile GPS applications,2018,energy opimization framework for GPS applicatins,,gps update interval,,no perf.,-,,,,,
+RAPL: memory power estimation and capping,2010,,,,,,,,,,,
+Energy metering for free: Augmenting switching regulators for real-time monitoring,2008,instrument power supply and track switching frequency to approx Load (A) of different lecels of current,,,,"no runtime
+no correlation analysis",-,,,,,
+An energy-aware framework for coordinated dynamic software management in mobile computers,2004,framework for handeling the tradeoff between QoS and Energy consumption,,,,"no runtime
+no correlation analysis",-,,,,,
+E-Android: A new energy profiling tool for smartphones,2017,Framework for measuring energy consumption and detecting energy bugs,,,,"no runtime
+no correlation analysis",-,,,,,
+Static analysis of energy consumption for LLVM IR programs,2015,"Energy consumption analysis based on intermediate Compiler Language
+Coarse graind energy measurements correlated to function level",,"Programs, Platforms",,"no runtime
+no correlation analysis",-,,,,,
+Estimating Android applications' CPU energy usage via bytecode profiling,2012,"approach for generating energy model at method level (also bb and line level)
+via bytecode profiling",,different programs,,"no runtime
+no correlation analysis",-,,,,,
+Estimating mobile application energy consumption using program analysis,2013,code level energy modeling of apps,,APPs,,"for most applications, time and energy are almost independent",No corr.,,,,,
+JouleGuard: energy guarantees for approximate applications,2015,energy budget restriction of approximate applications,,papprox. applications,,no correlation analyse,-,,,,,
+Identifying program power phase behavior using power vectors,2003,"Power phase program behaviour analysis
+power values are generated by performance counters",,GZIPs WLs,,no correlation analyse,-,,,,,
+"The latency, accuracy, and battery (LAB) abstraction: programmer productivity and energy efficiency for continuous mobile context sensing",2013,empirical anlysis,,,,no correlation analyse,-,,,,,
+Data-oriented characterization of application-level energy optimization,2015,analysis of impact of data management decisions of programmers,,"WL, D",,performance-energy tradeoff for DVFS of Data-oriented systems,neg. corr.,,,,,
+What is keeping my phone awake? Characterizing and detecting no-sleep energy bugs in smartphone apps,2012,energy wake lock bug detection - android,,,,no measurements,-,,,,,
+EnerJ: Approximate data types for safe and general low-power computation,2011,"energy- accuracy tradeoff
+find code sections that are good for approximation",,,,no performance measurements,-,,,,,
+JouleTrack: a web based tool for software energy profiling,2001,profiling energy consumption of software at different granularities,,,,no performance measurements,-,,,,,
+Instruction level power analysis and optimization of software,1996,instruction level power consumption measurements,,,,no performance measurements,-,,,,,
+Currentcy: A Unifying Abstraction for Expressing Energy Management Policies,2003,"proposes a currency model, treating energy as a resource",,,,"no performance measurements
+no correlation analyse",-,,,,,
+Fine-grained energy profiling for power-aware application design,2008,Analysis suggestion of performance-energy tradeoffs,,,,no measurements,-,,,,,
+Comparing Mobile Applications’ Energy Consumption,2013,mobile applications energy consumption in combination with different features (caching),,,,no performance measured,-,,,,,
